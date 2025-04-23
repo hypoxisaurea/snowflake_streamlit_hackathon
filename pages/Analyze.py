@@ -13,10 +13,16 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.subheader("🛍️ 고객 맞춤형 백화점 방문 & 소비 예측")
+st.header("🛍️ 고객 맞춤형 백화점 방문 & 소비 예측")
 
 user_inputs = get_user_input()
 
-# 분석 시작 버튼
-if st.button("🔍 분석 시작하기"):
-    switch_page("result")
+# 5개의 column을 만들고 오른쪽 2개만 사용
+col1, col2, col3, col4 = st.columns([1, 1, 1, 1.1])
+
+with col3:
+    if st.button("🔍 분석 시작하기"):
+        switch_page("result")
+with col4:
+    if st.button("🏠 홈으로 돌아가기"):
+        switch_page("app")
