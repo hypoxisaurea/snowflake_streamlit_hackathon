@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
+import os
 from ui.input_form import get_user_input
 
 
@@ -24,10 +24,10 @@ def main():
     col1, col2, col3, col4 = st.columns([1, 1, 1, 1.1])
     with col3:
         if st.button("🔍 분석 시작하기"):
-            switch_page("result")
+            st.switch_page("pages/Result.py")
     with col4:
         if st.button("🏠 홈으로 돌아가기"):
-            switch_page("app")
+            st.switch_page("app.py")
 
 if __name__ == "__main__":
     main()

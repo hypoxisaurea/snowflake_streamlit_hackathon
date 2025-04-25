@@ -32,20 +32,14 @@ def get_user_input():
 
     st.divider()
 
-
-    st.subheader("🌤️ 환경 조건")
-
     col5, col6 = st.columns(2)
     with col5:
-        weather = st.selectbox("날씨", ["맑음", "흐림", "비", "눈"])
-    with col6:
-        season = st.slider("계절 (월)", 1, 12, 4)
+        type = st.selectbox("고객 형태", ["싱글", '신혼부부',"영유아가족", "청소년가족", "성인자녀가족", '실버'])
 
     return {
         "gender": gender,
         "age": age,
         "residence": residence,
         "work": work,
-        "weather": weather,
-        "season": season
+        "type": type
     }
