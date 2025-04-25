@@ -1,4 +1,5 @@
 import streamlit as st
+from snowflake.snowpark import Session
 
 # 사이드바 제거
 st.markdown("""
@@ -21,7 +22,7 @@ st.markdown("""
 
 
 def get_user_input():
-    st.header("🧩 타겟 고객 정보")
+    st.header("🧩  타겟 고객 정보")
     st.markdown("<br>", unsafe_allow_html=True)
 
     # 성별 입력: st.markdown 레이블 사용, 위젯 레이블 숨김
