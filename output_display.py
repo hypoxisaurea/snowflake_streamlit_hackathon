@@ -3,6 +3,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 def display_prediction_results(prediction):
+    st.title("방문 예측 대시보드 🔮")
     st.subheader("🎯 예측 결과")
     
     # 백화점 방문 예측 결과
